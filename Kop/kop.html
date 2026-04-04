@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Köp – Saab JAS 39 Gripen</title>
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="kopStyle.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="leftSide">
+            <a href="../index.html" class="logo">Saab JAS 39
+                Gripen</a>
+            <nav>
+                <a href="köp.html" data-sv="Köp" data-en="Buy">Köp</a>
+                <a href="versioner.html" data-sv="Versioner" data-en="Versions">Versioner</a>
+            </nav>
+        </div>
+        <div class="lang">
+            <button class="langBtn active" id="btnSV">SV</button>
+            <button class="langBtn" id="btnEN">EN</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1 data-sv="Köp Gripen" data-en="Buy Gripen">Köp Gripen</h1>
+        <p data-sv="Fyll i formuläret så återkommer vi inom 48 timmar."
+            data-en="Fill in the form and we'll get back to you within 48 hours.">
+            Responstid: 48-76 timmar.
+        </p>
+    </section>
+
+    <main>
+        <div class="formCard">
+            <h2 data-sv="Förfrågningsformulär" data-en="Inquiry Form">Förfrågningsformulär</h2>
+            <p class="sub" data-sv="Fält markerade med * är obligatoriska."
+                data-en="Fields marked with * are required.">
+                Fält markerade med * är obligatoriska.
+            </p>
+
+            <form id="orderForm" novalidate>
+
+                <div class="fieldRow">
+                    <div class="fieldGroup">
+                        <label for="fname" data-sv="Förnamn *" data-en="First Name *">Förnamn *</label>
+                        <input type="text" id="fname" placeholder="Saab">
+                        <p class="errMsg" id="err-fname" data-sv="Ange förnamn." data-en="Enter first name.">Ange
+                            förnamn.</p>
+                    </div>
+                    <div class="fieldGroup">
+                        <label for="lname" data-sv="Efternamn *" data-en="Last Name *">Efternamn *</label>
+                        <input type="text" id="lname" placeholder="Gripen">
+                        <p class="errMsg" id="err-lname" data-sv="Ange efternamn." data-en="Enter last name.">Ange
+                            efternamn.</p>
+                    </div>
+                </div>
+
+                <div class="fieldRow">
+                    <div class="fieldGroup">
+                        <label for="email" data-sv="E-post *" data-en="Email *">E-post *</label>
+                        <input type="email" id="email" placeholder="erik@forsvarsmakten.se">
+                        <p class="errMsg" id="err-email" data-sv="Ange en giltig e-post."
+                            data-en="Enter a valid email.">Ange en giltig e-post.</p>
+                    </div>
+                    <div class="fieldGroup">
+                        <label for="phone" data-sv="Telefon *" data-en="Phone *">Telefon *</label>
+                        <input type="tel" id="phone" placeholder="+46 70 000 00 00">
+                        <p class="errMsg" id="err-phone" data-sv="Ange telefonnummer." data-en="Enter phone number.">
+                            Ange telefonnummer.</p>
+                    </div>
+                </div>
+
+                <div class="fieldGroup">
+                    <label for="org" data-sv="Organisation *" data-en="Organisation *">Organisation *</label>
+                    <input type="text" id="org" placeholder="Försvarsmakten">
+                    <p class="errMsg" id="err-org" data-sv="Ange organisation." data-en="Enter organisation.">Ange
+                        organisation.</p>
+                </div>
+
+                <div class="fieldGroup">
+                    <label for="country" data-sv="Land *" data-en="Country *">Land *</label>
+                    <select id="country">
+                        <option value="" data-sv="Välj land..." data-en="Select country...">Välj land...</option>
+                        <option>Sverige</option>
+                        <option>Finland</option>
+                        <option>Brasilien</option>
+                        <option>Tjeckien</option>
+                        <option>Ungern</option>
+                        <option>Sydafrika</option>
+                        <option>Thailand</option>
+                        <option data-sv="Annat" data-en="Other">Annat</option>
+                    </select>
+                    <p class="errMsg" id="err-country" data-sv="Välj land." data-en="Select a country.">Välj land.</p>
+                </div>
+
+                <div class="fieldGroup">
+                    <label data-sv="Välj Gripen-variant *" data-en="Choose Gripen Variant *">Välj Gripen-variant
+                        *</label>
+                    <div class="modelPicker">
+
+                        <div class="modelCard" data-variant="JAS 39A">
+                            <img src="39A.jpg" alt="JAS 39A">
+                            <div class="modelInfo">
+                                <span class="modelName">JAS 39A</span>
+                                <span class="modelDesc" data-sv="Originalversionen, enkelsitsig"
+                                    data-en="Original version, single-seat">Originalversionen, enkelsitsig</span>
+                            </div>
+                        </div>
+
+                        <div class="modelCard" data-variant="JAS 39B">
+                            <img src="39B.jpg" alt="JAS 39B">
+                            <div class="modelInfo">
+                                <span class="modelName">JAS 39B</span>
+                                <span class="modelDesc" data-sv="Tvåsitsig träningsversion"
+                                    data-en="Twin-seat training version">Tvåsitsig träningsversion</span>
+                            </div>
+                        </div>
+
+                        <div class="modelCard" data-variant="JAS 39C">
+                            <img src="39C.jpg" alt="JAS 39C">
+                            <div class="modelInfo">
+                                <span class="modelName">JAS 39C</span>
+                                <span class="modelDesc" data-sv="Uppgraderad, NATO-kompatibel"
+                                    data-en="Upgraded, NATO-compatible">Uppgraderad, NATO-kompatibel</span>
+                            </div>
+                        </div>
+
+                        <div class="modelCard" data-variant="JAS 39D">
+                            <img src="39D.jpg" alt="JAS 39D">
+                            <div class="modelInfo">
+                                <span class="modelName">JAS 39D</span>
+                                <span class="modelDesc" data-sv="Tvåsitsig C-version"
+                                    data-en="Twin-seat C-version">Tvåsitsig C-version</span>
+                            </div>
+                        </div>
+
+                        <div class="modelCard" data-variant="JAS 39E">
+                            <img src="39E.avif" alt="JAS 39E">
+                            <div class="modelInfo">
+                                <span class="modelName">JAS 39E</span>
+                                <span class="modelDesc" data-sv="Senaste generationen"
+                                    data-en="Latest generation">Senaste generationen</span>
+                                <span class="modelTag" data-sv="Ny" data-en="New">Ny</span>
+                            </div>
+                        </div>
+
+                        <div class="modelCard" data-variant="JAS 39F">
+                            <img src="39F.jpg" alt="JAS 39F">
+                            <div class="modelInfo">
+                                <span class="modelName">JAS 39F</span>
+                                <span class="modelDesc" data-sv="Tvåsitsig E-version"
+                                    data-en="Twin-seat E-version">Tvåsitsig E-version</span>
+                                <span class="modelTag" data-sv="Ny" data-en="New">Ny</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <input type="hidden" id="variant">
+                    <p class="errMsg" id="err-variant" data-sv="Välj en variant." data-en="Select a variant.">Välj en
+                        variant.</p>
+                </div>
+
+                <div class="fieldGroup">
+                    <label for="qty" data-sv="Antal enheter *" data-en="Number of Units *">Antal flygplan *</label>
+                    <input type="number" id="qty" placeholder="12" min="1">
+                    <p class="errMsg" id="err-qty" data-sv="Ange antal (min 1)." data-en="Enter quantity (min 1).">Ange
+                        antal (min 1).</p>
+                </div>
+
+                <div class="fieldGroup">
+                    <label for="message" data-sv="Meddelande" data-en="Message">Meddelande</label>
+                    <textarea id="message" placeholder="Beskriv krav eller frågor..."></textarea>
+                </div>
+
+                <div class="checkRow">
+                    <input type="checkbox" id="terms">
+                    <label for="terms" data-sv="Jag godkänner att Saab AB behandlar mina uppgifter. *"
+                        data-en="I agree that Saab AB may process my data. *">
+                        Jag godkänner att Saab AB behandlar mina uppgifter. *
+                    </label>
+                </div>
+                <p class="errMsg" id="err-terms" data-sv="Du måste godkänna villkoren."
+                    data-en="You must accept the terms.">Du måste godkänna villkoren.</p>
+
+                <button type="submit" class="submitBtn" data-sv="Skicka förfrågan" data-en="Submit Inquiry">Skicka
+                    förfrågan</button>
+
+            </form>
+        </div>
+    </main>
+
+    <div class="thankYou" id="thankYou">
+        <div class="thankYouInner">
+            <div class="thankYouCheck">✓</div>
+            <h2 data-sv="Tack för din förfrågan!" data-en="Thank you for your inquiry!">Tack för din förfrågan!</h2>
+            <p data-sv="Vi har tagit emot din beställning. Saabs försvarsteam återkommer inom 48 timmar."
+                data-en="We have received your order. Saab's defence team will contact you within 48 hours.">
+                Vi har tagit emot din beställning. Saabs försvarsteam återkommer inom 48 timmar.
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <p data-sv="Skapad av Rishi 2026" data-en="Created by Rishi 2026">Skapad av Rishi 2026</p>
+    </footer>
+
+    <script src="kopJS.js"></script>
+
+</body>
+
+</html>

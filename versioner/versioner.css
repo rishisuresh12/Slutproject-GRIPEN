@@ -1,0 +1,197 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #eef2f6;
+            color: #1c1c1c;
+        }
+
+        /* TOPBAR */
+        .topbar {
+            background: #0b1f3a;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .leftSide { display: flex; align-items: center; gap: 2rem; }
+        .logo { color: white; text-decoration: none; font-weight: bold; font-size: 1.3rem; }
+        nav a { color: white; text-decoration: none; margin-right: 1rem; font-size: 0.95rem; }
+        nav a:hover { text-decoration: underline; }
+        .lang { display: flex; gap: 8px; }
+        .langBtn {
+            background: white; color: #0b1f3a; border: none;
+            padding: 6px 12px; border-radius: 6px; font-weight: bold; cursor: pointer;
+        }
+        .langBtn.active { background: #142f55; color: white; }
+
+        /* HERO */
+        .hero {
+            background: #142f55;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .hero h1 { font-size: 2.4rem; margin-bottom: 10px; }
+        .hero p { font-size: 1rem; opacity: 0.7; }
+
+        /* VARIANT TABS */
+        .variantTabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 28px 20px 0;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .tabBtn {
+            background: white;
+            border: 2px solid #dde3ec;
+            color: #0b1f3a;
+            padding: 9px 24px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            cursor: pointer;
+            font-family: Arial, Helvetica, sans-serif;
+            transition: all 0.2s;
+        }
+        .tabBtn:hover { border-color: #4a9eff; }
+        .tabBtn.active { background: #0b1f3a; color: white; border-color: #0b1f3a; }
+
+        /* PANELS */
+        .variantPanel { display: none; }
+        .variantPanel.active { display: block; }
+
+        /* SLIDESHOW */
+        .slideshowWrap {
+            position: relative;
+            width: 82%;
+            margin: 28px auto 0;
+            background: #000;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.28);
+            aspect-ratio: 16/9;
+        }
+        .slide { display: none; width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
+        .slide.active { display: block; }
+        .slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+        .slideLabel {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            background: linear-gradient(transparent, rgba(11,31,58,0.82));
+            color: white;
+            padding: 40px 24px 18px;
+            pointer-events: none;
+        }
+        .slideLabelName { font-size: 1.4rem; font-weight: bold; letter-spacing: 0.04em; }
+        .slideLabelSub { font-size: 0.82rem; opacity: 0.7; margin-top: 3px; }
+
+        .slideCounter {
+            position: absolute;
+            top: 14px; right: 18px;
+            background: rgba(0,0,0,0.5);
+            color: white;
+            font-size: 0.78rem;
+            padding: 4px 10px;
+            border-radius: 20px;
+        }
+
+        .slideNav {
+            position: absolute;
+            top: 50%; transform: translateY(-50%);
+            background: rgba(11,31,58,0.65);
+            color: white; border: none;
+            width: 44px; height: 44px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: background 0.2s;
+            z-index: 10;
+        }
+        .slideNav:hover { background: rgba(11,31,58,1); }
+        .slideNav.prev { left: 14px; }
+        .slideNav.next { right: 14px; }
+
+        .slideDots {
+            display: flex; justify-content: center;
+            gap: 7px; margin: 14px 0 0;
+        }
+        .dot {
+            width: 9px; height: 9px;
+            background: #c5cdd8; border-radius: 50%;
+            cursor: pointer; transition: background 0.2s;
+        }
+        .dot.active { background: #0b1f3a; }
+
+        /* INFO ROW */
+        .infoRow {
+            width: 82%;
+            margin: 18px auto 60px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 16px;
+        }
+        .infoBox {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.07);
+            padding: 22px 24px;
+        }
+        .infoBoxTitle {
+            font-size: 0.66rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: #4a9eff;
+            margin-bottom: 14px;
+        }
+
+        .specRow {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 6px 0;
+            border-bottom: 1px solid #f0f3f7;
+            font-size: 0.84rem;
+        }
+        .specRow:last-child { border-bottom: none; }
+        .specLabel { color: #888; }
+        .specValue { font-weight: bold; color: #0b1f3a; text-align: right; }
+
+        .operatorList { display: flex; flex-direction: column; gap: 10px; }
+        .operatorItem { display: flex; align-items: center; gap: 10px; }
+        .operatorFlag { font-size: 1.4rem; line-height: 1; }
+        .operatorName { font-size: 0.88rem; font-weight: bold; color: #0b1f3a; }
+        .operatorCount { font-size: 0.76rem; color: #888; margin-top: 1px; }
+
+        .factList { display: flex; flex-direction: column; gap: 11px; }
+        .factItem {
+            font-size: 0.83rem;
+            color: #444;
+            line-height: 1.5;
+            padding-left: 11px;
+            border-left: 3px solid #4a9eff;
+        }
+
+        footer {
+            background: #ddd;
+            text-align: center;
+            padding: 15px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        @media (max-width: 800px) {
+            .slideshowWrap, .infoRow { width: 95%; }
+            .infoRow { grid-template-columns: 1fr; }
+            .topbar { flex-direction: column; gap: 10px; }
+        }
