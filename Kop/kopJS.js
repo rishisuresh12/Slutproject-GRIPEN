@@ -142,7 +142,7 @@ document.getElementById('orderForm').addEventListener('submit', function (e) {
 
                 '<div style="background:#1a7a4a;color:white;padding:12px 40px;font-size:0.85rem;display:flex;align-items:center;gap:10px;">' +
                     '<span style="font-size:1.1rem;">&#10003;</span>' +
-                    '<span>Forfragan mottagen - Saabs forsvarsteam aterkommerinom 48 timmar.</span>' +
+                    '<span>Förfragån mottagen - Saabs aterkommer inom 48 timmar.</span>' +
                 '</div>' +
 
                 '<div style="padding:36px 40px;">' +
